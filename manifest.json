@@ -1,0 +1,144 @@
+/* 隐藏助手容器样式 */
+.hide-helper-container {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 内容区域 */
+.hide-helper-section {
+    padding: 10px;
+}
+
+/* 开启/关闭选项行样式 */
+.hide-helper-toggle-row {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+/* 标签样式 */
+.hide-helper-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* 选择框样式 */
+#hide-helper-toggle {
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 弹出对话框容器 */
+.hide-helper-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    z-index: 1001;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+/* 弹出对话框标题 */
+.hide-helper-popup-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* 输入行样式 */
+.hide-helper-input-row {
+    display: flex;
+    margin: 15px 0;
+    gap: 8px;
+}
+
+/* 当前设置显示 */
+.hide-helper-current {
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 输入框样式 */
+#hide-last-n {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* 按钮样式 */
+.hide-helper-btn {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.hide-helper-btn:hover {
+    background-color: #333333;
+}
+
+/* 底部按钮容器 */
+.hide-helper-popup-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 关闭按钮 */
+.hide-helper-close-btn {
+    padding: 8px 20px;
+    background-color: #444444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hide-helper-close-btn:hover {
+    background-color: #555555;
+}
+
+/* 输入框容器按钮样式 */
+#hide-helper-wand-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#hide-helper-wand-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 隐藏的消息样式增强 */
+.mes[is_visible="false"] {
+    opacity: 0.5; /* 使隐藏消息稍微更易于区分 */
+}
