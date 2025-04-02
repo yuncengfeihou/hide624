@@ -32,12 +32,12 @@
 
 .hide-helper-popup {
     position: fixed;
-    bottom: 100px; /* 从屏幕底部向上100px */
+    top: 50%; /* 改为垂直居中定位 */
     left: 50%;
-    transform: translateX(-50%); /* 仅水平居中，不进行垂直偏移 */
+    transform: translate(-50%, -50%); /* 同时水平和垂直居中 */
     width: 90%;
     max-width: 500px;
-    max-height: 70vh; /* 限制最大高度 */
+    max-height: 80vh; /* 增加最大高度 */
     overflow-y: auto; /* 内容溢出时显示滚动条 */
     background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.2);
