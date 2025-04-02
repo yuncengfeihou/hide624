@@ -1,144 +1,89 @@
-.hide-helper-container {
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* 基础重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 内容区域 */
-.hide-helper-section {
-    padding: 10px;
+/* 1. 主容器宽度为80%并居中 */
+.container {
+  width: 80% !important;
+  margin: 0 auto;
+  background-color: #555 !important;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 开启/关闭选项行样式 */
-.hide-helper-toggle-row {
-    display: flex;
-    margin: 10px 0;
-    align-items: center;
+/* 2. 确保三个组件间隔相等 */
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
 }
 
-/* 标签样式 */
-.hide-helper-label {
-    margin-right: 10px;
-    font-weight: bold;
+/* 保存设置按钮 */
+.save-button {
+  background-color: #444 !important;
+  color: white !important;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
 }
 
-/* 选择框样式 */
-#hide-helper-toggle {
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* 输入框居中 */
+.input-box {
+  margin: 0 auto;
+  background-color: #444 !important;
+  border: 1px solid #666;
+  padding: 8px 12px;
+  border-radius: 4px;
+  flex-grow: 0;
+  width: auto;
 }
 
-.hide-helper-popup {
-    position: fixed;
-    top: 50%; /* 改为垂直居中定位 */
-    left: 50%;
-    transform: translate(-50%, -50%); /* 同时水平和垂直居中 */
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh; /* 增加最大高度 */
-    overflow-y: auto; /* 内容溢出时显示滚动条 */
-    background-color: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    z-index: 1001;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    display: none;
+/* 取消隐藏按钮 */
+.unhide-button {
+  background-color: #444 !important;
+  color: white !important;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* 弹出对话框标题 */
-.hide-helper-popup-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+/* 3. 所有文本强制为白色 */
+.container, 
+.container * {
+  color: white !important;
 }
 
-/* 输入行样式 */
-.hide-helper-input-row {
-    display: flex;
-    margin: 15px 0;
-    gap: 8px;
+/* 4. 左对齐保存设置和当前隐藏设置 */
+.save-button, 
+.current-settings {
+  text-align: left;
+  margin-left: 0;
 }
 
-/* 当前设置显示 */
-.hide-helper-current {
-    margin: 15px 0;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.05);
+/* 当前隐藏设置显示区域 */
+.settings-display {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #444 !important;
+  border-radius: 4px;
 }
 
-/* 输入框样式 */
-#hide-last-n {
-    flex: 1;
-    padding: 8px 12px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 14px;
+/* 设置标题 */
+.settings-title {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-/* 按钮样式 */
-.hide-helper-btn {
-    padding: 8px 14px;
-    border-radius: 4px;
-    border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.hide-helper-btn:hover {
-    background-color: #333333;
-}
-
-/* 底部按钮容器 */
-.hide-helper-popup-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* 关闭按钮 */
-.hide-helper-close-btn {
-    padding: 8px 20px;
-    background-color: #444444;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.hide-helper-close-btn:hover {
-    background-color: #555555;
-}
-
-/* 输入框容器按钮样式 */
-#hide-helper-wand-button {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 5px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-#hide-helper-wand-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* 隐藏的消息样式增强 */
-.mes[is_visible="false"] {
-    opacity: 0.5; /* 使隐藏消息稍微更易于区分 */
+/* 通用按钮悬停效果 */
+.save-button:hover,
+.unhide-button:hover {
+  background-color: #666 !important;
 }
