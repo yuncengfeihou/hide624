@@ -2,6 +2,13 @@
 .hide-helper-container {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;  /* 使用fixed定位 */
+    top: 190px;       /* 设置固定顶部距离 */
+    left: 50%;        /* 水平居中第一步 */
+    transform: translateX(-50%); /* 水平居中第二步 */
+    z-index: 1000;    /* 确保层级合适 */
+    width: 600px;     /* 设置与快速回复菜单相似的宽度 */
+    max-width: 80vw;  /* 响应式宽度限制 */
 }
 
 /* 内容区域 */
