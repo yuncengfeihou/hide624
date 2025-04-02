@@ -93,7 +93,7 @@ function createPopup() {
         <!-- 输入行 - 保存设置按钮 + 输入框 + 取消隐藏按钮 -->
         <div class="hide-helper-input-row">
             <button id="hide-save-settings-btn" class="hide-helper-btn">保存设置</button>
-            <input type="number" id="hide-last-n" min="0" placeholder="隐藏N楼之前的消息">
+            <input type="number" id="hide-last-n" min="0" placeholder="隐藏最近N楼之前的消息">
             <button id="hide-unhide-all-btn" class="hide-helper-btn">取消隐藏</button>
         </div>
         
