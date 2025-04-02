@@ -1,83 +1,64 @@
-/* 主UI容器 */
-.settings-ui {
+/* 主UI容器 - 使用更通用的选择器 */
+#settings-container, .settings-container, .ui-container, #ui-container, .dialog, #dialog {
   width: 80%; /* 宽度为原来的80% */
   margin: 0 auto; /* 居中显示 */
-  background-color: #555; /* 灰色背景 */
-  color: white; /* 白色文本 */
+  background-color: #555 !important; /* 灰色背景 */
+  color: white !important; /* 白色文本 */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block !important; /* 确保显示 */
 }
 
 /* 标题样式 */
-.settings-ui h2 {
-  color: white; /* 强制白色文本 */
-  margin-bottom: 20px;
+h1, h2, h3, .title, .header {
+  color: white !important; /* 强制白色文本 */
   text-align: left;
-}
-
-/* 当前隐藏设置区域 */
-.current-settings {
-  text-align: left;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #666; /* 稍微深一点的灰色 */
-  border-radius: 5px;
-}
-
-/* 输入框容器 */
-.input-container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  margin: 20px 0; /* 上下间隔相等 */
-  width: 100%;
 }
 
 /* 输入框样式 */
-.input-box {
+input[type="text"], textarea, .input {
   width: 70%;
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #777;
-  color: white;
+  background-color: #777 !important;
+  color: white !important;
+  margin: 20px auto; /* 上下间隔相等，水平居中 */
+  display: block; /* 块级元素以便居中 */
 }
 
 /* 按钮通用样式 */
-.button {
+button, .button, input[type="button"], input[type="submit"] {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #444;
-  color: white;
+  background-color: #444 !important;
+  color: white !important;
   transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #333;
-}
-
-/* 保存设置按钮 */
-.save-button {
-  text-align: left; /* 左对齐 */
   margin: 20px 0; /* 上下间隔相等 */
+}
+
+/* 保存设置按钮 - 尝试多种可能的选择器 */
+.save-button, #save-button, button[type="submit"], input[type="submit"], 
+button:contains("保存"), button:contains("Save") {
+  text-align: left;
+  float: left; /* 左对齐 */
 }
 
 /* 取消隐藏按钮 */
-.unhide-button {
-  text-align: center;
-  margin: 20px 0; /* 上下间隔相等 */
+.unhide-button, #unhide-button, button:contains("取消"), button:contains("Unhide") {
+  display: block;
+  margin: 20px auto; /* 居中 */
 }
 
 /* 确保所有文本都是白色 */
-.settings-ui * {
+#settings-container *, .settings-container *, .ui-container *, #ui-container *, .dialog *, #dialog * {
   color: white !important;
 }
 
 /* 确保所有背景都是灰色 */
-.settings-ui input, 
-.settings-ui button,
-.settings-ui div {
+#settings-container div, .settings-container div, .ui-container div, #ui-container div, .dialog div, #dialog div {
   background-color: #555 !important;
 }
