@@ -38,6 +38,8 @@
     transform: translate(-50%, -50%);
     width: 90%;
     max-width: 500px;
+    max-height: 90vh; /* 添加最大高度为视口高度的90% */
+    overflow-y: auto; /* 添加垂直滚动条当内容溢出时 */
     background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
