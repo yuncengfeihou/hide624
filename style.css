@@ -1,115 +1,83 @@
-/* 基础样式重置 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
 /* 主UI容器 */
-.ui-container {
-  width: 80%; /* 将UI宽度减少到80% */
-  margin: 0 auto; /* 使UI居中 */
+.settings-ui {
+  width: 80%; /* 宽度为原来的80% */
+  margin: 0 auto; /* 居中显示 */
+  background-color: #555; /* 灰色背景 */
+  color: white; /* 白色文本 */
   padding: 20px;
-  background-color: #333;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 标题样式 */
-.ui-title {
-  font-size: 24px;
+.settings-ui h2 {
+  color: white; /* 强制白色文本 */
   margin-bottom: 20px;
-  color: white !important; /* 强制白色文本 */
-  text-align: center;
+  text-align: left;
 }
 
-/* 组件容器 - 使三个主要组件间隔相等 */
-.ui-components {
+/* 当前隐藏设置区域 */
+.current-settings {
+  text-align: left;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #666; /* 稍微深一点的灰色 */
+  border-radius: 5px;
+}
+
+/* 输入框容器 */
+.input-container {
   display: flex;
-  justify-content: space-between; /* 使组件间隔相等 */
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: center; /* 水平居中 */
+  margin: 20px 0; /* 上下间隔相等 */
+  width: 100%;
 }
 
-/* 按钮基础样式 */
+/* 输入框样式 */
+.input-box {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #777;
+  color: white;
+}
+
+/* 按钮通用样式 */
 .button {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
-  background-color: gray !important; /* 强制灰色背景 */
-  color: white !important; /* 强制白色文本 */
+  background-color: #444;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #333;
 }
 
 /* 保存设置按钮 */
 .save-button {
-  text-align: left;
-  margin-left: 0;
-}
-
-/* 输入框盒子 */
-.input-box {
-  margin: 0 auto; /* 输入框盒子位于水平中央 */
-  width: 40%;
-  background-color: gray !important; /* 强制灰色背景 */
-  border-radius: 4px;
-  padding: 10px;
-}
-
-/* 输入框样式 */
-.input-field {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #444;
-  color: white !important; /* 强制白色文本 */
+  text-align: left; /* 左对齐 */
+  margin: 20px 0; /* 上下间隔相等 */
 }
 
 /* 取消隐藏按钮 */
-.cancel-hide-button {
-  background-color: gray !important; /* 强制灰色背景 */
+.unhide-button {
+  text-align: center;
+  margin: 20px 0; /* 上下间隔相等 */
 }
 
-/* 当前隐藏设置区域 */
-.hidden-settings-section {
-  margin-top: 20px;
+/* 确保所有文本都是白色 */
+.settings-ui * {
+  color: white !important;
 }
 
-/* 当前隐藏设置标题 */
-.hidden-settings-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-align: left;
-  margin-left: 0;
-  color: white !important; /* 强制白色文本 */
-}
-
-/* 隐藏设置列表 */
-.hidden-settings-list {
-  list-style: none;
-  background-color: gray !important; /* 强制灰色背景 */
-  padding: 15px;
-  border-radius: 4px;
-}
-
-.hidden-settings-item {
-  margin-bottom: 8px;
-  color: white !important; /* 强制白色文本 */
-}
-
-/* 确保所有文字都是白色 */
-.ui-container, .ui-container * {
-  color: white !important; /* 所有文本强制白色 */
-}
-
-/* 确保所有盒子背景都是灰色 */
-.box, .button, .input-box, .hidden-settings-list {
-  background-color: gray !important; /* 所有盒子背景强制灰色 */
+/* 确保所有背景都是灰色 */
+.settings-ui input, 
+.settings-ui button,
+.settings-ui div {
+  background-color: #555 !important;
 }
