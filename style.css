@@ -30,16 +30,15 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* 弹出对话框容器 */
 .hide-helper-popup {
     position: fixed;
-    top: 50%;
+    bottom: 100px; /* 从屏幕底部向上100px */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* 仅水平居中，不进行垂直偏移 */
     width: 90%;
     max-width: 500px;
-    max-height: 90vh; /* 添加最大高度为视口高度的90% */
-    overflow-y: auto; /* 添加垂直滚动条当内容溢出时 */
+    max-height: 70vh; /* 限制最大高度 */
+    overflow-y: auto; /* 内容溢出时显示滚动条 */
     background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
