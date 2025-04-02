@@ -488,7 +488,17 @@ function setupEventListeners() {
     $('#hide-helper-wand-button').on('click', function() {
         // 只有在插件启用状态下才显示弹出框
         if (extension_settings[extensionName].enabled) {
-            $('#hide-helper-popup').show();
+            // 获取弹出框元素
+            const popup = $('#hide-helper-popup');
+            
+            // 首先显示弹出框但设为不可见，以便我们可以获取其尺寸
+            popup.css({
+                'display': 'block',
+                'visibility': 'hidden',
+                'position': 'fixed',
+                'left': '50%',
+                'transform': 'translateX(-50%)'
+            });
             
             // 更新输入框显示当前值
             const currentSettings = getCurrentHideSettings();
@@ -499,6 +509,26 @@ function setupEventListeners() {
             
             // 更新当前设置显示
             updateCurrentHideSettingsDisplay();
+            
+            // 获取弹出框高度
+            const popupHeight = popup.outerHeight();
+            const windowHeight = $(window).height();
+            
+            // 计算顶部位置 - 在视窗中央，但确保完全可见
+            // 距离底部至少100px
+            const topPosition = Math.min(
+                (windowHeight - popupHeight) / 2,  // 居中位置
+                windowHeight - popupHeight - 100   // 距底部至少100px
+            );
+            
+            // 确保顶部位置不小于10px（避免贴紧顶部）
+            const finalTopPosition = Math.max(10, topPosition);
+            
+            // 设置最终位置并使弹出框可见
+            popup.css({
+                'top': finalTopPosition + 'px',
+                'visibility': 'visible'
+            });
         } else {
             toastr.warning('隐藏助手当前已禁用，请在扩展设置中启用。');
         }
