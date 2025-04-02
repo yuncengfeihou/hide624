@@ -1,37 +1,3 @@
-.hide-helper-container {
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-}
-
-/* 内容区域 */
-.hide-helper-section {
-    padding: 10px;
-}
-
-/* 开启/关闭选项行样式 */
-.hide-helper-toggle-row {
-    display: flex;
-    margin: 10px 0;
-    align-items: center;
-}
-
-/* 标签样式 */
-.hide-helper-label {
-    margin-right: 10px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* 选择框样式 */
-#hide-helper-toggle {
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #444444;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 /* 弹出对话框容器 */
 .hide-helper-popup {
     position: fixed;
@@ -40,7 +6,7 @@
     transform: translate(-50%, -50%);
     width: 72%;
     max-width: 400px;
-    background-color: #333333;
+    background-color: rgba(0, 0, 0, 0.85); /* 改为黑色半透明 */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     z-index: 1001;
@@ -52,7 +18,7 @@
 
 /* 弹出对话框标题 */
 .hide-helper-popup-title {
-    font-size: 18px;
+    font-size: 16px; /* 减小字体 */
     font-weight: bold;
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -61,12 +27,12 @@
     color: #ffffff;
 }
 
-/* 输入行样式 */
-.hide-helper-input-row {
-    display: flex;
-    margin: 30px 0;
-    gap: 8px;
-    justify-content: center;
+/* 标签样式 */
+.hide-helper-label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 13px; /* 减小字体 */
 }
 
 /* 当前设置显示 */
@@ -74,9 +40,10 @@
     margin: 30px 0;
     padding: 8px;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.3); /* 调整为半透明黑色 */
     text-align: left;
     color: #ffffff;
+    font-size: 13px; /* 减小字体 */
 }
 
 /* 输入框样式 */
@@ -85,9 +52,9 @@
     padding: 8px 12px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #444444;
+    background-color: rgba(0, 0, 0, 0.3); /* 调整为半透明黑色 */
     color: #ffffff;
-    font-size: 14px;
+    font-size: 13px; /* 减小字体 */
 }
 
 /* 按钮样式 */
@@ -95,21 +62,21 @@
     padding: 8px 14px;
     border-radius: 4px;
     border: none;
-    background-color: #444444;
+    background-color: rgba(0, 0, 0, 0.5); /* 调整为半透明黑色 */
     color: #ffffff;
-    font-size: 14px;
+    font-size: 13px; /* 减小字体 */
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .hide-helper-btn:hover {
-    background-color: #555555;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* 底部按钮容器 */
 .hide-helper-popup-footer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* 改为居中对齐 */
     margin-top: 30px;
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -118,34 +85,14 @@
 /* 关闭按钮 */
 .hide-helper-close-btn {
     padding: 8px 20px;
-    background-color: #444444;
+    background-color: rgba(0, 0, 0, 0.5); /* 调整为半透明黑色 */
     color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 13px; /* 减小字体 */
 }
 
 .hide-helper-close-btn:hover {
-    background-color: #555555;
-}
-
-/* 输入框容器按钮样式 */
-#hide-helper-wand-button {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    padding: 5px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    color: #ffffff;
-}
-
-#hide-helper-wand-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* 隐藏的消息样式增强 */
-.mes[is_visible="false"] {
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.7);
 }
